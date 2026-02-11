@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkeypox AI Diagnostician</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-brand">🦠 Monkeypox AI</div>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/diagnose">Diagnose</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+    </ul>
+</nav>
+
+    <div class="container">
+        <h1>🦠 Monkeypox Detection AI</h1>
+        <p>Upload an image to get a diagnosis from the ensemble model.</p>
+
+        <form id="uploadForm">
+            <input type="file" id="imageUpload" name="file" accept="image/*" required>
+            <button type="submit">Get Diagnosis</button>
+        </form>
+
+        <div id="loading" style="display: none;">Processing image...</div>
+        
+        <div class="preview-area">
+            <img id="imagePreview" src="#" alt="Image Preview" style="display:none; max-width: 100%; height: auto;">
+        </div>
+
+        <div id="results" class="results-area">
+            </div>
+            <div id="limeExplanation" class="explanation-area" style="display: none;">
+    <h2>🧠 Model Explanation (LIME)</h2>
+      <p>Visualizing what the InceptionV3 model focused on for this prediction:</p>
+      <img id="limeImage" src="#" alt="LIME Explanation" style="max-width: 100%; height: auto; border: 1px solid #ccc;"/>
+      <p style="font-size: small;">*Green areas support the predicted class; red areas oppose it.</p>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

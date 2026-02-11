@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-brand">🦠 Monkeypox AI</div>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/diagnose">Diagnose</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+    </ul>
+</nav>
+
+<div class="home-page">
+
+    <h1>📞 Contact Us</h1>
+    <p>
+        If you have questions related to Monkeypox awareness, prevention, or
+        usage of this platform, feel free to reach out using the details below.
+    </p>
+
+    <hr>
+
+    <h3>🏢 Organization Details</h3>
+    <p>
+        <strong>Monkeypox Awareness & AI Support Portal</strong><br>
+        Public Health Information Division<br>
+        India
+    </p>
+
+    <p>
+        📧 <strong>Email:</strong> support@monkeypox-awareness.org<br>
+        📞 <strong>Phone:</strong> +91-XXXXXXXXXX<br>
+        ⏰ <strong>Working Hours:</strong> Monday – Friday (9:00 AM – 5:00 PM)
+    </p>
+
+    <hr>
+
+    <h3>✉️ Send Us a Message</h3>
+
+    <form method="post" action="#" style="max-width:600px;">
+        <label>Full Name</label><br>
+        <input type="text" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+
+        <label>Email Address</label><br>
+        <input type="email" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+
+        <label>Message</label><br>
+        <textarea rows="5" required
+            style="width:100%; padding:10px; margin-bottom:20px;"></textarea><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <hr>
+
+    <p style="font-size: 14px; color: #555;">
+        ⚠️ <strong>Disclaimer:</strong> This platform is intended for educational
+        and research purposes only. It does not replace professional medical
+        advice, diagnosis, or treatment. Always consult a qualified healthcare
+        provider for medical concerns.
+    </p>
+
+</div>
+
+</body>
+</html>
